@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>
+        Editar datos del jugador
+    </title>
+</head>
+<body>
+
+<form action= "{% url 'editar_jugadores' jugador.id %}" method="POST">{%csrf_token%}  
+<table>
+    {{formulario.as_table}}
+</table>
+
+<input type="submit" value="guardar"> 
+</form>
+</body>
+</html>

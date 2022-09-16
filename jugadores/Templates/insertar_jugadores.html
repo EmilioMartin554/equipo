@@ -1,0 +1,18 @@
+<head>
+
+
+    </head>
+    <body>
+    <h1>
+    Insertar jugadores
+    </h1>
+    <form action="insertar" method="POST">{% csrf_token %}
+        <p>nombre: <input type="text" name="nombre"></p>
+        <p>edad: <input type="text" name="edad"></p>
+        <p>posicion: <input type="text" name="posicion"> </p>
+        <p>peso: <input type="text" name="peso"></p>
+        <p>goles: <input type="text" name="goles"></p>
+        <input type="submit" value="Enviar">
+    
+        </form>
+             </html>

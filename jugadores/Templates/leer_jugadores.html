@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            Leer jugadores
+        </title>
+    </head>
+    <body>
+        {% if jugadores %}
+        {% for jugador in jugadores %}
+        <li>{{jugador.nombre}}</li>
+        <li>{{jugador.edad}}</li>
+        <li>{{jugador.posicion}}</li>
+        <li>{{jugador.peso}}</li>
+        <li>{{jugador.goles}}</li>
+        <p></p>
+        <p></p>
+        <p></p>
+        {%endfor%}
+        {%endif%}
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>buscar</title>
+    </head>
+    <body>
+        <form action="buscar" method="POST">{% csrf_token %}
+            <p>nombre: <input type="text" name="nombre"></p>
+            <input type="submit" value="Enviar">
+    
+        </form>
+        {% if jugadores %}
+        {% for jugador in jugadores %}
+            <li>{{jugador.nombre}}</li>
+            <li>{{jugador.edad}}</li>
+            <li>{{jugador.peso}}</li>
+            <li>{{jugador.posicion}}</li>
+            <li>{{jugador.goles}}</li>
+            <button>
+                <a href= "{% url 'eliminar' jugador.id %}"> Eliminar</a>
+                
+            </button>
+            <button>
+                <a href= "{% url 'editar_jugadores' jugador.id %}"> Editar</a>
+            </button>
+            {% endfor %}
+
+        {% endif %}
+        </body>
+</html>

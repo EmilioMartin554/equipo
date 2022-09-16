@@ -1,0 +1,5 @@
+Nombre: Emilio
+Edad: 29
+Posicion: mediocampista
+Peso: 90
+Goles: 32
